@@ -1,0 +1,25 @@
+int main(int argc, char *argv[])
+{
+    return 0;
+}
+
+// Pointers to Functions
+// TYPE (*POINTER_NAME) (ARG1, ARG2, ...)
+// The main use for this is to pass callbacks to other functions,
+// or to simulate classes and objects.
+// This is similar to how pointers to arrays can be used just like the arrays they point to.
+// Pointers to functions can be used like the functions they point to but with a different name.
+// This will work even if the function pointer returns a pointer to something:
+/*
+Write it: char *make_coolness(int awesome_levels);
+
+Wrap it: char *(*make_coolness) (int awesome_levels);
+
+Rename it: char *(*coolness_cb) (int awesome_levels);
+*/
+
+// The next problem to solve with using function pointers is that it’s hard to give them as 
+// parameters to a function, such as when you want to pass the function callback to another function.
+// The solution is to use typedef, which is a C keyword for making new names for other, more complex types.
+// The only thing you need to do is put typedef before the same function pointer syntax,
+// and then after that you can use the name like it’s a type. 
